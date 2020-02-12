@@ -1,8 +1,6 @@
-<h1> Create An Article</h1>
 
-<<<<<<< HEAD
 <% if @article.errors.any? %>
-<h2>Followings errors are occurred while creating new article!</h2>
+<h2>Followings errors are occurred!</h2>
 <ul>
   <% @article.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
@@ -25,6 +23,5 @@
     <%= f.submit %>
   </p>
 <% end %>
-=======
-<%= render "form" %>
->>>>>>> 590dc656cf32633e1d656d4437e59b86b7c881a0
+
+<%= link_to "Back to listing", articles_path %>

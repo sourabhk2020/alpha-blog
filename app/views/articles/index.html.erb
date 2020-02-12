@@ -1,0 +1,37 @@
+<h1>All articles listing</h1>
+
+<p>
+  <%= link_to "Home", root_path %> | 
+  <%= link_to "Create New Article", new_article_path %>
+</p>
+
+<table padding="6px" spacing="6px">
+  <thead>
+    <tr>  
+      <th>Sr. No.</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% a=0 %>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= a+1 %></td>
+        <td>
+          <%= article.title %>
+        </td>
+        <td>
+          <%= article.description %>  
+        </td>
+        <td>
+          <%= link_to "Edit", edit_article_path(article) %> | 
+          <%= link_to "Show", article_path(article) %> | 
+          <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"} %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+<table>
+
