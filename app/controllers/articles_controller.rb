@@ -1,10 +1,19 @@
 class ArticlesController < ApplicationController
   
+<<<<<<< HEAD
   before_action :set_article, only: [:edit, :update, :show, :destroy]
   
+=======
+<<<<<<< HEAD
+#   def index
+
+#   end
+=======
+>>>>>>> 896cea72cd92191b6874095b25c4737e5ec6aaef
   def index
     @articles = Article.all
   end
+>>>>>>> 590dc656cf32633e1d656d4437e59b86b7c881a0
 
   def new
     @article = Article.new
@@ -21,6 +30,13 @@ class ArticlesController < ApplicationController
     end
     # @article.save
     # redirect_to articles_path(@article)
+<<<<<<< HEAD
+  end
+
+  def show
+    @article = Article.find(params[:id])
+=======
+>>>>>>> 590dc656cf32633e1d656d4437e59b86b7c881a0
   end
 
   def show
